@@ -1,0 +1,75 @@
+.Banner {
+    background-color: #211c24;
+    height: 632px;
+    overflow: hidden;
+    .container {
+        width: 100%;
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .Content {
+            .Title {
+                color: white;
+                transition: all 0.6s;
+            }
+            .desc {
+                color: gray;
+                transition: all 0.6s;
+            }
+            .btn {
+                width: 191px;
+                height: 56px;
+                background-color: transparent;
+                border: 1px solid white;
+                border-radius: 7px;
+                padding-left: 42px;
+                padding-right: 42px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                color: white;
+                transition: all 0.6s;
+            }
+            .btn:hover {
+                color: #211c24;
+                background-color: white;
+            }
+            .Title:hover {
+                color: aqua;
+            }
+            .desc:hover {
+                color: rgb(7, 107, 107);
+            }
+        }
+        .image {
+            width: 406px;
+            height: 632px;
+            img {
+                pointer-events: none;
+                width: 406px;
+                height: 632px;
+            }
+        }
+    }
+    @media (min-width: 1536px) {
+        .container {
+            flex-direction: row;
+        }
+    }
+    @media (max-width: 1024px) {
+        .container {
+            .Content {
+                align-items: center;
+                .Title {
+                    width: 300px;
+                    text-align: center;
+                }
+                .desc{
+                    width: 300px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

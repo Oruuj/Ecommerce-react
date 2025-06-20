@@ -1,0 +1,30 @@
+.product-area {
+  .product-container {
+    width: 100%;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+
+    .title {}
+
+  }
+
+  @media (width <=80rem) {
+    .product-container {
+      max-width: 920px;
+    }
+  }
+
+  @media (width <=64rem) {
+    .product-container {
+      max-width: 620px;
+    }
+  }
+
+  @media (width <=48rem) {
+    .product-container {
+      max-width: 260px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.product {
+  background-color: #f6f6f6;
+  width: 268px;
+  height: 432px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .img {
+    img {}
+  }
+
+  .content {
+    .btns {
+      .btn {
+        width: 100px;
+        height: 48px;
+        border-radius: 9px;
+        background-color: black;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      .cart {
+        transition: all 0.3s;
+        width: 100px;
+        height: 48px;
+        border-radius: 9px;
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+      }
+
+      .btn:hover {
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        scale: 1.1;
+      }
+
+      .cart:hover {
+        background-color: black;
+        color: white;
+        scale: 1.1;
+      }
+    }
+
+    .title {
+      text-align: center;
+    }
+  }
+}

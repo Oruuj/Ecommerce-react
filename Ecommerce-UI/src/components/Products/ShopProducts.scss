@@ -1,0 +1,35 @@
+.Container {
+    width: 831px;
+    margin-bottom: 50px;
+
+    .title {
+        .filter {
+            width: 200px;
+        }
+    }
+
+
+
+    @media (max-width: 64rem) {
+        .title {
+            transform: translate(110px, 0px);
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 48rem) {
+        .title {
+            transform: translate(129px, 0px);
+            width: 35%;
+        }
+
+        .count {
+            display: none;
+        }
+    }
+}
+
+.css-yewtcl-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    color: white !important;
+    background-color: black !important;
+}

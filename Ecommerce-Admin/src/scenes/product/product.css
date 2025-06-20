@@ -1,0 +1,76 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.create-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.create-btn button {
+    padding: 10px 20px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.table-wrapper {
+    border-collapse: separate !important;
+    border-radius: 20px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.product-table {
+    border-collapse: separate !important;
+    border-radius: 20px;
+    border-spacing: 0;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    background-color: #141B2D;
+}
+
+.product-table thead {
+    background-color: #141B2D;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.product-table th {
+    font-weight: bold;
+}
+
+.edit-btn {
+    padding: 10px;
+    width: 62px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #0021f7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    padding: 6px 12px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

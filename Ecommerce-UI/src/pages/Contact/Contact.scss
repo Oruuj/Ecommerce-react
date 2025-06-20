@@ -1,0 +1,48 @@
+#contact-page {
+  .container {
+    width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .little-title {
+      color: gray;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 400px;
+    }
+    .contacts {
+      height: 150px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .contact {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 200px;
+        gap: 20px;
+        .mail {
+          color: #5457ff;
+        }
+      }
+    }
+  }
+  @media (width <= 80rem) {
+  }
+  @media (width <= 64rem) {
+    .container {
+      width: 80%;
+    }
+  }
+  @media (width <= 48rem) {
+    .container {
+      width: 80%;
+      p {
+        width: 80%;
+      }
+    }
+  }
+}

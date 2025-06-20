@@ -1,0 +1,31 @@
+.discount-area {
+    .discount-container {
+        width: 100%;
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        .title {}
+
+    }
+
+    @media (width <=80rem) {
+        .discount-container {
+            max-width: 920px;
+        }
+    }
+
+    @media (width <=64rem) {
+        .discount-container {
+            max-width: 620px;
+        }
+    }
+
+    @media (width <=48rem) {
+        .discount-container {
+            max-width: 260px;
+        }
+    }
+}
