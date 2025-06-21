@@ -5,6 +5,9 @@ import { ColorModeContext, useMode } from "./theme";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import ProtectedRoute from "./ProtectedRoute";
+import Unauthorized from "./scenes/unauthorized/unauthorized";
+
 import ProductFeature from './scenes/productfeature/productfeature'
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
@@ -16,6 +19,8 @@ import ProductSlider from "./scenes/productslider/productslider";
 import Setting from "./scenes/setting/setting";
 import Slider from "./scenes/slider/slider";
 import Account from "./scenes/account/account";
+import Auth from "./scenes/Auth/Auth";
+
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -29,16 +34,81 @@ function App() {
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/products" element={<Product />} />
-              <Route path="/productfeature" element={<ProductFeature />} />
-              <Route path="/discount" element={<Discount />} />
-              <Route path="/category" element={<Category />} />
-              <Route path="/productslider" element={<ProductSlider />} />
-              <Route path="/setting" element={<Setting />} />
-              <Route path="/slider" element={<Slider />} />
-              <Route path="/account" element={<Account />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/unauthorized" element={<Unauthorized />} />
 
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/products"
+                element={
+                  <ProtectedRoute>
+                    <Product />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/productfeature"
+                element={
+                  <ProtectedRoute>
+                    <ProductFeature />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/discount"
+                element={
+                  <ProtectedRoute>
+                    <Discount />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/category"
+                element={
+                  <ProtectedRoute>
+                    <Category />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/productslider"
+                element={
+                  <ProtectedRoute>
+                    <ProductSlider />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/setting"
+                element={
+                  <ProtectedRoute>
+                    <Setting />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/slider"
+                element={
+                  <ProtectedRoute>
+                    <Slider />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/account"
+                element={
+                  <ProtectedRoute>
+                    <Account />
+                  </ProtectedRoute>
+                }
+              />
             </Routes>
             <ToastContainer
               position="top-right"
@@ -55,7 +125,6 @@ function App() {
           </main>
         </div>
       </ThemeProvider>
-
     </ColorModeContext.Provider>
   );
 }

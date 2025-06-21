@@ -1,0 +1,25 @@
+.user-menu {
+    position: absolute;
+    background: black;
+    width: 140px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .block {
+        text-decoration: none;
+        text-decoration-line: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}

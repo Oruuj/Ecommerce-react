@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -12,6 +12,7 @@ import DiscountIcon from '@mui/icons-material/Discount';
 import CategoryIcon from '@mui/icons-material/Category';
 import LinearScaleIcon from '@mui/icons-material/LinearScale';
 import TuneIcon from '@mui/icons-material/Tune';
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -35,6 +36,14 @@ const Sidebar = () => {
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
+  const [username, setUsername] = useState("");
+
+  React.useEffect(() => {
+    const storedUserName = localStorage.getItem("userName");
+    if (storedUserName) {
+      setUsername(storedUserName);
+    }
+  }, []);
 
   return (
     <Box
@@ -92,7 +101,7 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Ed Roh
+                  {username}
                 </Typography>
               </Box>
             </Box>
